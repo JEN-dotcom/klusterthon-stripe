@@ -20,7 +20,7 @@ app.get('/ping', (req, res) => {
 })
 
 app.get('/', (req, res) => {
-    res.send('stripe1 integrated')
+    res.send('stripe2 integrated')
 })
 
 app.post("/create-checkout-session", async (req, res) => {
