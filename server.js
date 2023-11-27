@@ -7,12 +7,7 @@ const cors = require("cors");
 
 app.use(express.json());
 
-app.use(
-    cors({
-        origin: [ "http://localhost:5173, http://localhost:5173/, http://127.0.0.1:5173, https://klusterthon.vercel.app"],
-        methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    })
-)
+app.use(cors())
 
 const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY)
 app.get('/ping', (req, res) => {
