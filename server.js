@@ -18,6 +18,11 @@ const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY)
 app.get('/ping', (req, res) => {
     res.send('pong 🏓')
 })
+
+app.get('/', (req, res) => {
+    res.send('stripe integrated')
+})
+
 app.post("/create-checkout-session", async (req, res) => {
     try {
         const session = await stripe.checkout.sessions.create({
