@@ -9,7 +9,7 @@ app.use(express.json());
 
 app.use(cors())
 
-const stripe = require("stripe")(process.env.NEXT_PUBLIC_STRIPE_API_KEY)
+const stripe = require("stripe")("sk_test_51OGrhREqzipbRaTwDTekBLVIwJokrla50fVxypSIk5jfzIx87OiZFRYoy3JLHxrDQIvH7fE91N6gNDg6lJfG4Pk000qQfNtVZe")
 app.get('/ping', (req, res) => {
     res.send('pong 🏓')
 })
